@@ -1,0 +1,136 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  width: 304px;
+  transition: width .2s ease-in-out;
+  &--small {
+    width: 50px;
+    .sidebar-resize {
+      &__button {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__container {
+    z-index: 200;
+    height: 100vh;
+    width: inherit;
+    background-color: #fafafa;
+  }
+}
+
+.sidebar-resize {
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 16px;
+  height: 100%;
+  cursor: pointer;
+  border-left: 1px solid white;
+  transition: .3s ease-in-out;
+  &:hover {
+    border-color: lighten($brand-accent, 50%);
+  }
+  &__button {
+    position: relative;
+    top: calc(50% - 18px);
+    height: 36px;
+    color: transparent;
+    width: 24px;
+    left: -1px;
+    cursor: pointer;
+    background: none;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    &:before,
+    &:after {
+      content: "";
+      background-color: $brand-accent;
+      width: 2px;
+      height: 8px;
+      position: absolute;
+      left: 8px;
+      opacity: 0;
+      transform: rotate(0deg);
+      border-radius: 16px;
+      transition: transform 200ms ease-in-out 0s, opacity 300ms ease-in-out 200ms;
+    }
+    &:before {
+      top: 10px;
+      transform-origin: 1px 7px;
+    }
+    &:after {
+      top: 16px;
+      transform-origin: 1px 1px;
+    }
+    &:focus::before,
+    &:focus::after {
+      opacity: 1;
+    }
+  }
+  &:hover .sidebar-resize__button:before,
+  &:hover .sidebar-resize__button:after {
+    opacity: 1;
+  }
+  &:hover .sidebar-resize__button:before {
+    transform: rotate(40deg);
+  }
+  &:hover .sidebar-resize__button:after {
+    transform: rotate(-40deg);
+  }
+}
+
+
+.sidebar-menu {
+  overflow: hidden;
+  &__list {
+    li {
+      display: block;
+      &:hover {
+        background-color: #f0f0f0;
+      }
+      & > a,
+      & > span {
+        display: block;
+        padding: 15px 20px;
+        color: #707070;
+        font-size: 16px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &:hover {
+          text-decoration: none;
+          color: $brand-accent;
+        }
+      }
+
+      &.sidebar-menu__sub-item {
+        cursor: pointer;
+      }
+      ul {
+        background-color: #f0f0f0;
+        & > li {
+          & > a,
+          & > span {
+            padding-left: 50px;
+          }
+          &:hover {
+            background-color: #e7e7e7;
+          }
+        }
+      }
+      &.sidebar-menu__sub-item[aria-expanded="true"] {
+        background-color: #f0f0f0;
+        & > span {
+          color: $brand-accent;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &__icon {
+    margin-right: 10px;
+  }
+}
+

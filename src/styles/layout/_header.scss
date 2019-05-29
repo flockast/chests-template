@@ -1,0 +1,44 @@
+.header {
+  background-color: $brand-accent;
+  &__logo {
+    background-image: svg-load('../img/refresh.svg');
+    width: 25px;
+    height: 25px;
+    transition: .2s ease-in-out;
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+  &__link {
+    color: white;
+  }
+}
+
+.header-search {
+  position: relative;
+  &__input {
+    border: none;
+    padding-right: 35px;
+    background: lighten($brand-accent, 30%);
+    font-size: 14px;
+    transition: .2s ease-in-out;
+    &::placeholder {
+      color: white;
+    }
+    &:focus + .header-search__icon {
+      color: black;
+    }
+  }
+  &__icon {
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    appearance: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: white;
+  }
+}

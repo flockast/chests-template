@@ -1,0 +1,21 @@
+@import
+  "abstracts/variables",
+  "abstracts/mixins",
+  "abstracts/smart-grid";
+
+// vendors
+@import
+  "~bootstrap/scss/bootstrap",
+  "~open-iconic/font/css/open-iconic-bootstrap.scss";
+
+@import
+  "components/breadcrumbs",
+  "components/table";
+
+@import
+  "layout/header",
+  "layout/main",
+  "layout/sidebar",
+  "layout/content";
+
+

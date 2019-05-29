@@ -1,0 +1,12 @@
+.main {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  &__sidebar {
+    position: relative;
+    margin-right: 32px;
+  }
+  &__content {
+    flex: 1;
+    padding-bottom: 100px;
+  }
+}

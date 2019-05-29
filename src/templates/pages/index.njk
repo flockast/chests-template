@@ -1,0 +1,21 @@
+{%
+    set data = {
+        title: "Game Insight Chest"
+    }
+%}
+
+{% extends "layouts/main.njk" %}
+
+{% block content %}
+    {% include "partials/header.njk" %}
+    <section class="main">
+        <div class="main__sidebar">
+            {% include "partials/sidebar.njk" %}
+        </div>
+        <div class="main__content">
+            {% include "partials/breadcrumbs.njk" %}
+            {% include "partials/content.njk" %}
+            {% include "partials/pagination.njk" %}
+        </div>
+    </section>
+{% endblock %}

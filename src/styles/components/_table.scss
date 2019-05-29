@@ -1,0 +1,35 @@
+.table {
+  .disable-row {
+    opacity: .5;
+  }
+  .red {
+    color: #993518;
+  }
+  thead {
+    background: #fafafa;
+  }
+  thead th, tbody td {
+    border-left: none;
+    border-right: none;
+  }
+  thead th {
+    border-bottom-width: 1px;
+  }
+}
+
+.editable {
+  box-shadow: none;
+  border: none;
+  background: none;
+  appearance: none;
+  border-radius: 3px;
+  width: 100%;
+  &--error {
+    box-shadow: 0 0 0 1px red;
+  }
+  &:focus {
+    background: white;
+    box-shadow: 0 0 0 1px #ececec;
+    outline: none;
+  }
+}

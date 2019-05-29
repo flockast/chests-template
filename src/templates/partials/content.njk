@@ -1,0 +1,70 @@
+<div class="table-responsive-md">
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Название</th>
+                <th>Количество</th>
+                <th>meta</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in range(0, 2) %}
+                <tr>
+                    <td>1323</td>
+                    <td><input type="text" class="editable" value="Первый сундук"></td>
+                    <td><input type="text" class="editable" value="2"></td>
+                    <td><input type="text" class="editable red" value="list"></td>
+                </tr>
+                <tr class="disable-row">
+                    <td>2131</td>
+                    <td>Редкий сундук</td>
+                    <td>3</td>
+                    <td><span class="red">list</span></td>
+                </tr>
+                <tr>
+                    <td>2131</td>
+                    <td><input type="text" class="editable" value="Легендарный сундук"></td>
+                    <td><input type="text" class="editable" value="3"></td>
+                    <td><input type="text" class="editable red" value="list"></td>
+                </tr>
+                <tr class="disable-row">
+                    <td>2131</td>
+                    <td>Эпичный сундук</td>
+                    <td>3</td>
+                    <td><span class="red">list</span></td>
+                </tr>
+                <tr class="disable-row">
+                    <td>1123</td>
+                    <td>Обычный сундук</td>
+                    <td>2</td>
+                    <td><span class="red">list</span></td>
+                </tr>
+                <tr class="disable-row">
+                    <td>4343</td>
+                    <td>Бесплатный сундук</td>
+                    <td>2</td>
+                    <td><span class="red">list</span></td>
+                </tr>
+                <tr>
+                    <td>1232</td>
+                    <td><input type="text" class="editable" value="Обычный сундук"></td>
+                    <td><input type="text" class="editable" value="3"></td>
+                    <td><input type="text" class="editable red" value="list"></td>
+                </tr>
+                <tr>
+                    <td>1232</td>
+                    <td><input type="text" class="editable" value="Легендарный сундук"></td>
+                    <td><input type="text" class="editable" value="3"></td>
+                    <td><input type="text" class="editable red" value="list"></td>
+                </tr>
+                <tr>
+                    <td>4521</td>
+                    <td><input type="text" class="editable" value="Квестовый сундук"></td>
+                    <td><input type="text" class="editable" value="2"></td>
+                    <td><input type="text" class="editable red" value="list"></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
