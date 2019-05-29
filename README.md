@@ -1,4 +1,5 @@
-#Admin template
+Admin template
+===========
 
 ### Setup
 Install dependencies<br>
